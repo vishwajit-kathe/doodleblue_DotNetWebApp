@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET Framework</h1>
+    <p class="lead">
+        ASP.NET Framework MVC technology is used to develop dynamic websites that
+        enables a clean separation of concerns and gives you full control over markup
+        for enjoyable development. <br />
+    </p>
+    <h4>Developed Web applications using Data First Approach and Entity Framework & Also include Paging for records.</h4>
+    <p class="btn btn-default"> @Html.ActionLink("Demo", "viewlist", "Employee")</p>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>Add</h2>
+        <p>Here you can add New Employee</p>
+        <p class="btn btn-default">@Html.ActionLink("Add", "Create", "Employee")</p>
+</div>
+
+    <div class="col-md-4">
+        <h2>Update </h2>
+        <p>Update or Edit Existing Employee</p>
+        <p class="btn btn-default">@Html.ActionLink("Update", "viewlist", "Employee")</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Delete</h2>
+        <p>Delete Existing Records Permanetly</p>
+        <p class="btn btn-default">@Html.ActionLink("Delete", "viewlist", "Employee")</p>
+    </div>
+
+
+</div>

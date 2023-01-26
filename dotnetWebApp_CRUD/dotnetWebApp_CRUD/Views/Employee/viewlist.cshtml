@@ -1,0 +1,46 @@
+﻿@model IEnumerable<dotnetWebApp_CRUD.Models.tblemployee>
+
+@{
+    ViewBag.Title = "viewlist";
+}
+
+<h2>Working Employees</h2>
+<br />
+ <button class=btn-group> @Html.ActionLink("Add Employee", "Create")</button>
+<br /><br />
+
+<table class="table table-striped" id="pagination">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model => model.Ename)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Department)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.City)</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.EmployeeID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
