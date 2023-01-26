@@ -1,5 +1,17 @@
 # Doodleblue DotNet Web Application 
 
+## Technology Used ::
+```
+1. ASP.NET MVC
+2. Enity Framework
+3. ADO.NET
+4. Razor Code
+5. JQuery 
+6. BootStrap
+7. CSS
+8. MySQL
+```
+
 ## Following Things included ::
 ```
 1. CRUD Operation
